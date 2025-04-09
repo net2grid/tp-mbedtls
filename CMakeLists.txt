@@ -62,7 +62,7 @@ endif()
 # Set the project root directory.
 set(MBEDTLS_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 
-option(ENABLE_PROGRAMS "Build Mbed TLS programs." ON)
+option(ENABLE_PROGRAMS "Build Mbed TLS programs." OFF)
 
 option(UNSAFE_BUILD "Allow unsafe builds. These builds ARE NOT SECURE." OFF)
 option(MBEDTLS_FATAL_WARNINGS "Compiler warnings treated as errors" ON)
@@ -92,7 +92,7 @@ string(REGEX MATCH "MSVC" CMAKE_COMPILER_IS_MSVC "${COMPILER_ID}")
 if(CMAKE_COMPILER_IS_MSVC)
     option(ENABLE_TESTING "Build Mbed TLS tests." OFF)
 else()
-    option(ENABLE_TESTING "Build Mbed TLS tests." ON)
+    option(ENABLE_TESTING "Build Mbed TLS tests." OFF)
 endif()
 
 # Warning string - created as a list for compatibility with CMake 2.8
